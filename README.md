@@ -52,8 +52,8 @@ FacePulse detects **13 distinct facial expressions** from a live webcam feed usi
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repo-url>
-cd Temporary
+git clone https://github.com/tajindervirk/FacePulse.git
+cd facepulse
 ```
 
 ### 2. Install Dependencies
@@ -68,7 +68,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser.
+Open (http://localhost:5173) in your browser.
 
 On first load, allow camera access when prompted. MediaPipe will download the face and hand landmark models (~20 MB) from Google's CDN — this only happens once and is then cached by the browser.
 
@@ -131,7 +131,7 @@ FacePulse/
 ```
 Webcam Feed (640×480)
        │
-       ▼ requestAnimationFrame loop (throttled to 150ms)
+       ▼ requestAnimationFrame loop (throttled to 100ms)
 ┌─────────────────────────────┐
 │   MediaPipe FaceLandmarker  │ → 478 face landmarks + 52 blendshape scores
 │   MediaPipe HandLandmarker  │ → 21 hand landmarks (thumb tip [4] + index tip [8])
